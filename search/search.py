@@ -70,7 +70,7 @@ def tinyMazeSearch(problem):
     from game import Directions
     s = Directions.SOUTH
     w = Directions.WEST
-    return  [s, s, w, s, w, w, s, w]
+    return  [w,w,w,w,w,w,w,w,w,w,w,w,w,w,w,w,w,w,w]
 
 def depthFirstSearch(problem):
     """
@@ -369,9 +369,39 @@ def aStarSearch(problem, heuristic=nullHeuristic):
     return action_sequence
     util.raiseNotDefined()
 
+def aStarSearchLocallyObservable(problem, heuristic=nullHeuristic):
+    """Search the node that has the lowest combined cost and heuristic first."""
+    #The following lines are mine
+    
+    from game import Directions
+    #import ipdb
+    
+    #Problem is an object of class SearchProblem. Since the goal is fixed at (1,1), this is a PositionSearchProblem
+    current_state=problem.getStartState()
+    path=[]
+    while(not problem.isGoalState(current_state)):
+        current_path=aStarSearch(problem,heuristic)
+        #follow current path until a wall is detected.
+        for action in current_path:
+            if(not problem.senseWall(current_state,action)):
+                path.append(action)
+                current_state=problem.getNextState(current_state,action)
+            else:
+                break
+        if(problem.isGoalState(current_state)):
+            return path
+        else:
+            wall_location=problem.getNextState(current_state,action)
+            problem.addWall(wall_location)
+            problem.setStartState(current_state)
+           
+    return path
+
+    
 
 # Abbreviations
 bfs = breadthFirstSearch
 dfs = depthFirstSearch
 astar = aStarSearch
 ucs = uniformCostSearch
+astar2=aStarSearchLocallyObservable

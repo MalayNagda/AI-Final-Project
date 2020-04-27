@@ -152,7 +152,29 @@ class PositionSearchProblem(search.SearchProblem):
         costFn: A function from a search state (tuple) to a non-negative number
         goal: A position in the gameState
         """
-        self.walls = gameState.getWalls()
+        self.set_grid_bounds(gameState.getWalls())
+
+        self.actual_walls=gameState.getWalls() #These are the actual walls, not necessarily seen by the agent.
+
+        #Only the absolute boundaries have walls (Only wall Maria is present). New walls can be added later
+        self.walls =[] #Each entry represents a column
+        
+
+        for x in range(self.xmax+1):
+            if(x==0 or x==self.xmax):
+                self.walls.append([True]*(1+self.ymax))
+            else:
+                temp=[]
+                for y in range(self.ymax+1):
+                    if(y==0 or y==self.ymax):
+                        temp.append(True)
+                    else:
+                        temp.append(False)
+                self.walls.append(temp)
+
+        import ipdb
+        #wipdb.set_trace()
+
         self.startState = gameState.getPacmanPosition()
         if start != None: self.startState = start
         self.goal = goal
@@ -164,8 +186,19 @@ class PositionSearchProblem(search.SearchProblem):
         # For display purposes
         self._visited, self._visitedlist, self._expanded = {}, [], 0 # DO NOT CHANGE
 
+        
+
+
+    def set_grid_bounds(self,walls):
+        w=walls.asList()
+        self.ymax,self.xmax=max(w)
+        self.xmin,self.ymin=min(w)
+
     def getStartState(self):
         return self.startState
+
+    def setStartState(self,state):
+        self.startState=state
 
     def isGoalState(self, state):
         isGoal = state == self.goal
@@ -191,7 +224,6 @@ class PositionSearchProblem(search.SearchProblem):
          required to get there, and 'stepCost' is the incremental
          cost of expanding to that successor
         """
-
         successors = []
         for action in [Directions.NORTH, Directions.SOUTH, Directions.EAST, Directions.WEST]:
             x,y = state
@@ -209,6 +241,35 @@ class PositionSearchProblem(search.SearchProblem):
             self._visitedlist.append(state)
 
         return successors
+
+    def addWall(self,location):
+        self.walls[location[0]][location[1]]=True
+
+    def senseWall(self,location,action): #Senses whether the agent will bump into the wall
+        x=location[0]
+        y=location[1]
+
+        if(action=='North'):
+            return self.actual_walls[x][y+1] #Since the agent will always be within the confines of Wall Maria
+        if(action=='South'):
+            return self.actual_walls[x][y-1]
+        if(action=='East'):
+            return self.actual_walls[x+1][y]
+        if(action=='West'):
+            return self.actual_walls[x-1][y]
+
+    def getNextState(self,state,action):
+        x=state[0]
+        y=state[1]
+        
+        if(action=='North'):
+            return (x,y+1) #Since the agent will always be within the confines of Wall Maria
+        if(action=='South'):
+            return (x,y-1)
+        if(action=='East'):
+            return (x+1,y)
+        if(action=='West'):
+            return (x-1,y)
 
     def getCostOfActions(self, actions):
         """
