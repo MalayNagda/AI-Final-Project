@@ -440,6 +440,10 @@ def dStarSearch(problem):
     def ComputeShortestPath():
         while(U.TopKey()<CalculateKey(start_state) or rhs[start_state]!=g[start_state]):
             
+            if(len(U.heap)==1):
+                import ipdb
+                #ipdb.set_trace()
+
             u=U.Top()
             k_old=U.TopKey()
             k_new=CalculateKey(u)
@@ -490,6 +494,8 @@ def dStarSearch(problem):
     ComputeShortestPath()
     
     actions=[]
+
+
     while(not problem.isGoalState(start_state)):
         min_successor_value=float('inf')
         current_action=[]
@@ -506,10 +512,6 @@ def dStarSearch(problem):
         #Scan for edge-weight changes after moving to the new start_state
         changes=problem.getNeighboringWalls(start_state)
         
-        if(start_state==(2,1)):
-            import ipdb
-            ipdb.set_trace()
-
         if(changes):
             km+=manhattanDistance(last_state,start_state)
             last_state=start_state

@@ -172,9 +172,6 @@ class PositionSearchProblem(search.SearchProblem):
                         temp.append(False)
                 self.walls.append(temp)
 
-        import ipdb
-        #wipdb.set_trace()
-
         self.startState = gameState.getPacmanPosition()
         if start != None: self.startState = start
         self.goal = goal
@@ -196,7 +193,7 @@ class PositionSearchProblem(search.SearchProblem):
 
     def set_grid_bounds(self,walls):
         w=walls.asList()
-        self.ymax,self.xmax=max(w)
+        self.xmax,self.ymax=max(w)
         self.xmin,self.ymin=min(w)
 
     def getStartState(self):

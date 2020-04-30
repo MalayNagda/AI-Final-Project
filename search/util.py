@@ -207,6 +207,7 @@ class PriorityQueue:
             self.push(item, priority)
 
     def TopKey(self):
+        if(len(self.heap)==0): return [float('inf'),float('inf')]
         (priority, _,_ )=self.heap[0]
         return priority
     def Top(self):
