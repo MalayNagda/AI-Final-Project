@@ -265,7 +265,7 @@ class PositionSearchProblem(search.SearchProblem):
 
     def getNeighboringWalls(self,location):
 
-        #Senses the neigboring locations and returns true if the actual wall config is different from the known config
+        #Senses the neigboring locations and updates the known wall config if actual wall config is different from the known config
         changes=[]
         x=location[0]
         y=location[1]

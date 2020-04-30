@@ -369,7 +369,7 @@ def aStarSearch(problem, heuristic=nullHeuristic):
     return action_sequence
     util.raiseNotDefined()
 
-def aStarSearchLocallyObservable(problem, heuristic=nullHeuristic):
+def aStarSearchLocallyObservableTunnelVision(problem, heuristic=nullHeuristic):
     """Search the node that has the lowest combined cost and heuristic first."""
     #The following lines are mine
 
@@ -392,6 +392,28 @@ def aStarSearchLocallyObservable(problem, heuristic=nullHeuristic):
             problem.addWall(wall_location)
             problem.setStartState(current_state)
            
+    return path
+
+def aStarSearchLocallyObservable(problem, heuristic=nullHeuristic):
+    """Search the node that has the lowest combined cost and heuristic first."""
+    #The following lines are mine
+
+    #Problem is an object of class SearchProblem. Since the goal is fixed at (1,1), this is a PositionSearchProblem
+    current_state=problem.getStartState()
+    path=[]
+    while(not problem.isGoalState(current_state)):
+        current_path=aStarSearch(problem,heuristic)
+        #follow current path until a wall is detected.
+        for action in current_path:
+            if(not problem.getNeighboringWalls(current_state)):
+                path.append(action)
+                current_state=problem.getNextState(current_state,action)
+            else:
+                break
+        if(problem.isGoalState(current_state)):
+            return path
+        else:
+            problem.setStartState(current_state)           
     return path
 
 
@@ -504,19 +526,11 @@ def dStarSearch(problem):
     return actions
 
 
-
-
-
-
-
-
-
-
-
 # Abbreviations
 bfs = breadthFirstSearch
 dfs = depthFirstSearch
 astar = aStarSearch
 ucs = uniformCostSearch
 astar2=aStarSearchLocallyObservable
+astartv=aStarSearchLocallyObservableTunnelVision
 dstar=dStarSearch
