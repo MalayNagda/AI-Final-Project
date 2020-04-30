@@ -186,7 +186,12 @@ class PositionSearchProblem(search.SearchProblem):
         # For display purposes
         self._visited, self._visitedlist, self._expanded = {}, [], 0 # DO NOT CHANGE
 
-        
+    def AllStates(self):
+        states_list=[]
+        for i in range(self.xmax+1):
+            for j in range(self.ymax+1):
+                states_list.append((i,j))
+        return states_list
 
 
     def set_grid_bounds(self,walls):
@@ -257,6 +262,20 @@ class PositionSearchProblem(search.SearchProblem):
             return self.actual_walls[x+1][y]
         if(action=='West'):
             return self.actual_walls[x-1][y]
+
+    def getNeighboringWalls(self,location):
+
+        #Senses the neigboring locations and returns true if the actual wall config is different from the known config
+        changes=[]
+        x=location[0]
+        y=location[1]
+
+        for i in range(x-1,x+2):
+            for j in range(y-1,y+2):
+                if(self.actual_walls[i][j]!=self.walls[i][j]):
+                    self.walls[i][j]=self.actual_walls[i][j]
+                    changes.append((i,j))
+        return changes
 
     def getNextState(self,state,action):
         x=state[0]

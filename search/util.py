@@ -206,6 +206,23 @@ class PriorityQueue:
         else:
             self.push(item, priority)
 
+    def TopKey(self):
+        (priority, _,_ )=self.heap[0]
+        return priority
+    def Top(self):
+        (_, _, item)=self.heap[0]
+        return item
+
+    def Remove(self,item):
+        self.update(item,-float('inf'))
+        self.pop()
+
+    def CheckPresence(self,item):
+        for index, (p, c, i) in enumerate(self.heap):
+            if i == item:
+                return True
+        return False
+
 class PriorityQueueWithFunction(PriorityQueue):
     """
     Implements a priority queue with the same push/pop signature of the

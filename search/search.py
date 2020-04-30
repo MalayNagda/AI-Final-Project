@@ -372,10 +372,7 @@ def aStarSearch(problem, heuristic=nullHeuristic):
 def aStarSearchLocallyObservable(problem, heuristic=nullHeuristic):
     """Search the node that has the lowest combined cost and heuristic first."""
     #The following lines are mine
-    
-    from game import Directions
-    #import ipdb
-    
+
     #Problem is an object of class SearchProblem. Since the goal is fixed at (1,1), this is a PositionSearchProblem
     current_state=problem.getStartState()
     path=[]
@@ -397,7 +394,124 @@ def aStarSearchLocallyObservable(problem, heuristic=nullHeuristic):
            
     return path
 
+
+def dStarSearch(problem):
+
+    def manhattanDistance(s1,s2):
+        return abs(s1[0]-s2[0])+abs(s1[1]-s2[1])
+
+    def CalculateKey(u):
+        return [min(g[u],rhs[u])+manhattanDistance(start_state,u),min(g[u],rhs[u])]
+
+    def UpdateVertex(u):
+        if(not problem.isGoalState(u)): 
+            rhs[u]=float('inf')
+            for s,a,d in problem.getSuccessors(u):
+                rhs[u]=min(rhs[u],g[s]+1)
+
+        if(U.CheckPresence(u)):
+            U.Remove(u)
+
+        if(g[u]!=rhs[u]):
+            U.update(u,CalculateKey(u))
+
+    def ComputeShortestPath():
+        while(U.TopKey()<CalculateKey(start_state) or rhs[start_state]!=g[start_state]):
+            
+            u=U.Top()
+            k_old=U.TopKey()
+            k_new=CalculateKey(u)
+
+            U.pop()
+            #print(rhs[start_state])
+
+            if(k_old<k_new): #this means some edges have become unusable
+                U.update(u,k_new)
+
+            elif(g[u]>rhs[u]): #This means a shorter path has been found
+                g[u]=rhs[u]
+                for s,a,d in problem.getSuccessors(u):
+                    UpdateVertex(s)
+            else:  #This means g[u]=rhs[u] i.e vertex is locally consistent
+                g_old=g[u]
+                g[u]=float('inf')
+                UpdateVertex(u)
+
+                for s,a,d in problem.getSuccessors(u):
+                    UpdateVertex(s)
+
+    def senseWallAt(problem,s):
+        return problem.actual_walls[s[0]][s[1]]
+
+    def knowWallAt(problem,s):
+        return problem.walls[s[0]][s[1]]
+
+    from util import PriorityQueue
     
+    #Initialize
+    U=PriorityQueue()
+    km=0
+    start_state=problem.getStartState()
+    last_state=start_state #A copy is created, not a reference
+    problem.getNeighboringWalls(start_state) #Update the agent model
+    rhs={}
+    g={}
+
+    for state in problem.AllStates():
+        rhs[state]=float('inf')
+        g[state]=float('inf')
+
+    goal=(1,1) #Predefined
+    rhs[goal]=0
+    U.push(goal,[manhattanDistance(goal,start_state),0])
+
+    ComputeShortestPath()
+    
+    actions=[]
+    while(not problem.isGoalState(start_state)):
+        min_successor_value=float('inf')
+        current_action=[]
+
+        for s,a,discombombulation in problem.getSuccessors(start_state):
+           
+            if(1+g[s]<min_successor_value):
+                start_state=s
+                current_action=a
+                min_successor_value=1+g[s]
+
+        actions.append(current_action)
+        
+        #Scan for edge-weight changes after moving to the new start_state
+        changes=problem.getNeighboringWalls(start_state)
+        
+        if(start_state==(2,1)):
+            import ipdb
+            ipdb.set_trace()
+
+        if(changes):
+            km+=manhattanDistance(last_state,start_state)
+            last_state=start_state
+            for wall in changes:
+                g[wall]=float('inf') #Since there's a wall, it's impossible to reach from the goal node
+                
+                #When a wall is detected, upto 4 edges become infinitely weighted. Update all their successors (predecessors)
+                successors=problem.getSuccessors(wall) #No edge weight has gone down
+                for s1,a1,discombombulation in successors:
+                    UpdateVertex(s1)
+
+        ComputeShortestPath()
+
+    return actions
+
+
+
+
+
+
+
+
+
+
 
 # Abbreviations
 bfs = breadthFirstSearch
@@ -405,3 +519,4 @@ dfs = depthFirstSearch
 astar = aStarSearch
 ucs = uniformCostSearch
 astar2=aStarSearchLocallyObservable
+dstar=dStarSearch
