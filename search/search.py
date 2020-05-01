@@ -439,7 +439,7 @@ def dStarSearch(problem):
 
     def ComputeShortestPath():
         while(U.TopKey()<CalculateKey(start_state) or rhs[start_state]!=g[start_state]):
-            
+                
             u=U.Top()
             k_old=U.TopKey()
             k_new=CalculateKey(u)
