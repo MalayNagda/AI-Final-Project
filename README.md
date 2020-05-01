@@ -4,3 +4,11 @@ and can store information about the locations it has visited, and the structure 
 If we use traditional planning algorithms like A* to plan, we have to run them each time our robot changes its state. This is 
 redundant, and can be avoided by using an iterative planning approach like D* lite, which uses information computed in the previous
 iterations, reducing the need to recompute.
+
+To run the A* algorithm, execute the following line from inside the search folder
+
+python pacman.py -l bigMaze -z  -p SearchAgent -a fn=astar2,heuristic=manhattanHeuristic
+
+You can replace 'astar2' with 'dstar' or 'astartv' to run those algorithms
+
+To change the maze, replace 'bigMaze' with another maze like 'mediumMaze'
