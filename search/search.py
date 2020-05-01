@@ -90,7 +90,7 @@ def depthFirstSearch(problem):
     #The following lines are mine
     
     from game import Directions
-    #import ipdb
+    #b
     #Problem is an object of class SearchProblem
     start_state=problem.getStartState()
     state=start_state #-1 and -100 is to indicate that this is the start state
@@ -184,7 +184,7 @@ def breadthFirstSearch(problem):
     #The following lines are mine
     
     from game import Directions
-    #import ipdb
+    #b
     
     #Problem is an object of class SearchProblem
     start_state=problem.getStartState()
@@ -246,7 +246,7 @@ def uniformCostSearch(problem):
     #The following lines are mine
     
     from game import Directions
-    #import ipdb
+    #b
     
     #Problem is an object of class SearchProblem
     start_state=problem.getStartState()
@@ -315,7 +315,7 @@ def aStarSearch(problem, heuristic=nullHeuristic):
     #The following lines are mine
     
     from game import Directions
-    #import ipdb
+    #b
     
     #Problem is an object of class SearchProblem
     start_state=problem.getStartState()
@@ -440,10 +440,6 @@ def dStarSearch(problem):
     def ComputeShortestPath():
         while(U.TopKey()<CalculateKey(start_state) or rhs[start_state]!=g[start_state]):
             
-            if(len(U.heap)==1):
-                import ipdb
-                #ipdb.set_trace()
-
             u=U.Top()
             k_old=U.TopKey()
             k_new=CalculateKey(u)
