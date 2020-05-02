@@ -2,6 +2,19 @@ Team name- Lumpus
 
 Topic- Life-long planning
 
+Team members-
+Sagar Khar
+Laukik Mujumdar
+Malay Tushar Nagda
+Prabal Bijoy Dutta
+
+Contributions-
+Research & Solution formulation: Sagar Khar
+Code Implementation: Laukik Mujumdar
+Testing and Bug fixes: Malay Tushar Nagda
+Analysis & Report Generation: Prabal Bijoy Dutta
+
+
 A repository to implement the D* lite search algorithm in a pacman environment. The agent only sees its neighboring squares,
 and can store information about the locations it has visited, and the structure of the walls surrounding those locations.
 
