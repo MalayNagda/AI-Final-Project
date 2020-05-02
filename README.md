@@ -3,15 +3,15 @@ Team name- Lumpus
 Topic- Life-long planning
 
 Team members-
-Sagar Khar
-Laukik Mujumdar
-Malay Tushar Nagda
+Sagar Khar,
+Laukik Mujumdar,
+Malay Tushar Nagda,
 Prabal Bijoy Dutta
 
 Contributions-
-Research & Solution formulation: Sagar Khar
-Code Implementation: Laukik Mujumdar
-Testing and Bug fixes: Malay Tushar Nagda
+Research & Solution formulation: Sagar Khar,
+Code Implementation: Laukik Mujumdar,
+Testing and Bug fixes: Malay Tushar Nagda,
 Analysis & Report Generation: Prabal Bijoy Dutta
 
 
