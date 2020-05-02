@@ -1,4 +1,5 @@
 Team name- Lumpus
+
 Topic- Life-long planning
 
 A repository to implement the D* lite search algorithm in a pacman environment. The agent only sees its neighboring squares,
