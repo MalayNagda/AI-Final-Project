@@ -56,6 +56,7 @@ D* Lite results in higher number of expanded nodes for smallMaze and tinyMaze bu
 | bigCorners | 0.7 | 0.8 |
 | tinySearch | 0.7 | 0.7 | 
 | tinySafeSearch | 0.7 | 0.7 | 
+
 As seen with the number of expanded nodes, the time taken by the agent for planning a path to the goal is also significantly lesser with D* Lite algorithm
 than A* search for bigger sized mazes and equally good for smaller sized mazes.
 
