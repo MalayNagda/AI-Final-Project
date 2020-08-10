@@ -13,6 +13,7 @@ The objective was to compare the performance of D* Lite with A* search and A* se
 performs better than A* search for big and complex enough mazes as descrobed in [this paper on D* Lite](http://idm-lab.org/bib/abstracts/papers/aaai02b.pdf) 
 We present our results in terms of the number of nodes expanded for reaching the goal state and the final score achieved in the Pacman domain. 
 
+## Results
 Number of nodes expanded by the algorithms discussed above for different mazes sizes and complexities were as tabulated below.
 | Maze | D* Lite | A* search | A* search (TV) |
 | ------------- | ------------- | ------------- | ------------- |
@@ -29,13 +30,16 @@ The final score achieved using the three search algortihms and different mazes w
 | SmallMaze | 473 | 473 | 471 |
 | tinyMaze | 502 | 502 | 502 |
 
-To run the A* algorithm, execute the following line from inside the search folder
+## Running the tests
+We have used Linux environment for this project. The corresponding commands for running the tests are given below.
 
-python pacman.py -l bigMaze -z  -p SearchAgent -a fn=astar2,heuristic=manhattanHeuristic
+To run the D* Lite algorithm on 'bigMaze', execute the following line from inside the search folder
 
-You can replace 'astar2' with 'dstar' or 'astartv' to run those algorithms
+python pacman.py -l bigMaze -z  -p SearchAgent -a fn=dstar,heuristic=manhattanHeuristic
 
-To change the maze, replace 'bigMaze' with another maze like 'mediumMaze'
+You can replace 'dstar' with 'astar2' or 'astartv' to run the respective algorithms
+
+To test on different mazes, replace 'bigMaze' with another maze like 'mediumMaze', 'smallMaze', 'tinyMaze'.
 
 A* search implemetation in Pacman domain video- https://drive.google.com/file/d/1dJxdAXtt_TP36qseuFwgjHao1YwLrx1H/view?usp=sharing
 
