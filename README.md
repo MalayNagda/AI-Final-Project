@@ -35,7 +35,7 @@ A* search- Tunnel Vision implemetation in Pacman domain video- https://drive.goo
 D* Lite implemetation in Pacman domain video- https://drive.google.com/file/d/1YwP7NWzpVlkjzU_yhGjMebTtfalB7fww/view?usp=sharing
 
 ## Results
-#### Number of nodes expanded by the algorithms discussed above for different mazes sizes and complexities were as tabulated below.
+#### 1. Number of nodes expanded by the algorithms discussed above for different mazes sizes and complexities were as tabulated below.
 
 | Maze | D* Lite | A* search | A* search (TV) |
 | ------------- | ------------- | ------------- | ------------- |
@@ -47,7 +47,7 @@ D* Lite implemetation in Pacman domain video- https://drive.google.com/file/d/1Y
 As expected the agent expands fewer nodes with D* Lite for bigMaze and mediumMaze with almost 5 times and 3 times fewer nodes respectively as compared to A* search and A* search (TV) for the same mazes. 
 D* Lite results in higher number of expanded nodes for smallMaze and tinyMaze but not to the same degree as was the case for A* search and A* search (TV) for bigMaze and mediumMaze. 
 
-* Time taken (in seconds) by D* Lite algorithm and A* search for path planning towards a goal for different mazes was-
+#### 2. Time taken (in seconds) by D* Lite algorithm and A* search for path planning towards a goal for different mazes was-
 
 | Maze | D* Lite | A* search | 
 | ------------- | ------------- | ------------- |
@@ -60,7 +60,7 @@ D* Lite results in higher number of expanded nodes for smallMaze and tinyMaze bu
 As seen with the number of expanded nodes, the time taken by the agent for planning a path to the goal is also significantly lesser with D* Lite algorithm
 than A* search for bigger sized mazes and equally good for smaller sized mazes.
 
-* The final score achieved using the three search algortihms and different mazes were-
+#### 3. The final score achieved using the three search algortihms and different mazes were-
 
 | Maze | D* Lite | A* search | A* search (TV) |
 | ------------- | ------------- | ------------- | ------------- |
