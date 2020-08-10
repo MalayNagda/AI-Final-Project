@@ -8,7 +8,7 @@ and can store information about the locations it has visited, and the structure 
 If we use traditional planning algorithms like A* which just uses heuristics for planning, the agent has to recompute the entire path to goal state if an obstacle appears in the pre-computed path. This is redundant, and can be avoided by using a planning approach like D* lite which combines usage of incremental path planning and heuristics.
 
 The objective was to compare the performance of D* Lite with A* search and A* search- Tunnel Vission(TV) to corroborate that D* Lite 
-performs better (memory usage and computation time) than A* search for big and complex enough mazes as descrobed in [this paper on D* Lite](http://idm-lab.org/bib/abstracts/papers/aaai02b.pdf) 
+performs better (memory usage and computation time) than A* search for big and complex enough mazes as described in [this paper on D* Lite](http://idm-lab.org/bib/abstracts/papers/aaai02b.pdf) 
 We present our results in terms of the number of nodes expanded for reaching the goal state and the final score achieved in the Pacman domain. 
 
 ## Getting Started
