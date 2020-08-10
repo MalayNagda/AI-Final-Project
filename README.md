@@ -35,7 +35,7 @@ A* search- Tunnel Vision implemetation in Pacman domain video- https://drive.goo
 D* Lite implemetation in Pacman domain video- https://drive.google.com/file/d/1YwP7NWzpVlkjzU_yhGjMebTtfalB7fww/view?usp=sharing
 
 ## Results
-Number of nodes expanded by the algorithms discussed above for different mazes sizes and complexities were as tabulated below.
+* Number of nodes expanded by the algorithms discussed above for different mazes sizes and complexities were as tabulated below.
 | Maze | D* Lite | A* search | A* search (TV) |
 | ------------- | ------------- | ------------- | ------------- |
 | bigMaze | 10979 | 54160 | 52085 |
@@ -46,7 +46,7 @@ Number of nodes expanded by the algorithms discussed above for different mazes s
 As expected the agent expands fewer nodes with D* Lite for bigMaze and mediumMaze with almost 5 times and 3 times fewer nodes respectively as compared to A* search and A* search (TV) for the same mazes. 
 D* Lite results in higher number of expanded nodes for smallMaze and tinyMaze but not to the same degree as was the case for A* search and A* search (TV) for bigMaze and mediumMaze. 
 
-The final score achieved using the three search algortihms and different mazes were-
+* The final score achieved using the three search algortihms and different mazes were-
 | Maze | D* Lite | A* search | A* search (TV) |
 | ------------- | ------------- | ------------- | ------------- |
 | bigMaze | 92 | 100 | 70 |
