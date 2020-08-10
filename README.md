@@ -44,7 +44,7 @@ A* search- Tunnel Vision implemetation in Pacman domain video- https://drive.goo
 D* Lite implemetation in Pacman domain video- https://drive.google.com/file/d/1YwP7NWzpVlkjzU_yhGjMebTtfalB7fww/view?usp=sharing
 
 ## Authors
-* Sagar Khar- Research & Solution formulation
+* Sagar Khar- Research and Solution formulation
 * Laukik Mujumda- Code Implementation
 * Malay Tushar Nagda- Testing and Bug fixes
-* Prabal Bijoy Dutta- Analysis & Report Generation
+* Prabal Bijoy Dutta- Analysis and Report Generation
