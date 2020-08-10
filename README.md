@@ -14,26 +14,8 @@ We present our results in terms of the number of nodes expanded for reaching the
 ## Getting Started
 You can download project on your local machine for further development and testing. See Running the tests for instructions on replicating our reults.
 
-The three algorithms implemented can be found in 
-
-
-
-## Results
-Number of nodes expanded by the algorithms discussed above for different mazes sizes and complexities were as tabulated below.
-| Maze | D* Lite | A* search | A* search (TV) |
-| ------------- | ------------- | ------------- | ------------- |
-| bigMaze | 10979 | 54160 | 52085 |
-| mediumMaze | 3251 | 8842 | 9481 |
-| SmallMaze | 669 | 548 | 582 |
-| tinyMaze | 122 | 74 | 46 |
-
-The final score achieved using the three search algortihms and different mazes were-
-| Maze | D* Lite | A* search | A* search (TV) |
-| ------------- | ------------- | ------------- | ------------- |
-| bigMaze | 92 | 100 | 70 |
-| mediumMaze | 428 | 420 | 420 |
-| SmallMaze | 473 | 473 | 471 |
-| tinyMaze | 502 | 502 | 502 |
+The three algorithms implemented can be found in search.py within the search folder.
+The different mazes can be found in layouts folder within the search folder.
 
 ## Running the tests
 We have used Linux environment for this project. The corresponding commands for running the tests are given below.
@@ -51,6 +33,23 @@ A* search implemetation in Pacman domain video- https://drive.google.com/file/d/
 A* search- Tunnel Vision implemetation in Pacman domain video- https://drive.google.com/file/d/12yHSP5GARA5iG13dDJndBeEIUmZIvLVx/view?usp=sharing
 
 D* Lite implemetation in Pacman domain video- https://drive.google.com/file/d/1YwP7NWzpVlkjzU_yhGjMebTtfalB7fww/view?usp=sharing
+
+## Results
+Number of nodes expanded by the algorithms discussed above for different mazes sizes and complexities were as tabulated below.
+| Maze | D* Lite | A* search | A* search (TV) |
+| ------------- | ------------- | ------------- | ------------- |
+| bigMaze | 10979 | 54160 | 52085 |
+| mediumMaze | 3251 | 8842 | 9481 |
+| SmallMaze | 669 | 548 | 582 |
+| tinyMaze | 122 | 74 | 46 |
+
+The final score achieved using the three search algortihms and different mazes were-
+| Maze | D* Lite | A* search | A* search (TV) |
+| ------------- | ------------- | ------------- | ------------- |
+| bigMaze | 92 | 100 | 70 |
+| mediumMaze | 428 | 420 | 420 |
+| SmallMaze | 473 | 473 | 471 |
+| tinyMaze | 502 | 502 | 502 |
 
 ## Authors
 * Sagar Khar- Research and Solution formulation
