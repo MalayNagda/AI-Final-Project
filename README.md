@@ -22,8 +22,9 @@ If we use traditional planning algorithms like A* to plan, we have to run them e
 redundant, and can be avoided by using an iterative planning approach like D* lite, which uses information computed in the previous
 iterations, reducing the need to recompute.
 
-The objective was to compare the performance of D* Lite with A* search and A* search- Tunnel Vission(TV) in terms of the number of nodes expanded for
-reaching the goal state and the final score achieved in the Pacman domain. 
+The objective was to compare the performance of D* Lite with A* search and A* search- Tunnel Vission(TV) to corroborate that D* Lite 
+performs better than A* search for big and complex enough mazes as descrobed in [this paper on D* Lite](http://idm-lab.org/bib/abstracts/papers/aaai02b.pdf) 
+We present our results in terms of the number of nodes expanded for reaching the goal state and the final score achieved in the Pacman domain. 
 
 Number of nodes expanded by the algorithms discussed above for different mazes sizes and complexities were as tabulated below.
 | Maze | D* Lite | A* search | A* search (TV) |
