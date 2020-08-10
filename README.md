@@ -12,10 +12,10 @@ performs better (memory usage and computation time) than A* search for big and c
 We present our results in terms of the number of nodes expanded for reaching the goal state, time taken (in seconds) to plan a path to the goal state and the final score achieved in the Pacman domain. 
 
 ## Getting Started
-You can download project on your local machine for further development and testing. See Running the tests for instructions on replicating our reults.
+You can download project on your local machine for further development and testing. See Running the tests section for instructions on replicating our reults.
 
-The three algorithms implemented can be found in search.py within the search folder.
-The different mazes can be found in layouts folder within the search folder.
+The code for three algorithms implemented can be found in search.py within the search folder.
+The files for different mazes can be found in layouts folder within the search folder.
 
 ## Running the tests
 We have used Linux environment for this project. The corresponding commands for running the tests are given below.
