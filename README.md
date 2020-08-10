@@ -9,7 +9,7 @@ If we use traditional planning algorithms like A* which just uses heuristics for
 
 The objective was to compare the performance of D* Lite with A* search and A* search- Tunnel Vission(TV) to corroborate that D* Lite 
 performs better (memory usage and computation time) than A* search for big and complex enough mazes as described in [this paper on D* Lite](http://idm-lab.org/bib/abstracts/papers/aaai02b.pdf) 
-We present our results in terms of the number of nodes expanded for reaching the goal state and the final score achieved in the Pacman domain. 
+We present our results in terms of the number of nodes expanded for reaching the goal state, time taken (in seconds) to plan a path to the goal state and the final score achieved in the Pacman domain. 
 
 ## Getting Started
 You can download project on your local machine for further development and testing. See Running the tests for instructions on replicating our reults.
@@ -70,6 +70,8 @@ than A* search for bigger sized mazes and equally good for smaller sized mazes.
 | tinyMaze | 502 | 502 | 502 |
 
 We can see that the agent consistently receives a higher or equal score for all the mazes using D* Lite as compared with other algorithms that were tested.  
+
+The results tested over the three metrics- number of nodes expanded, time taken for path planning and the final score after the agent reaches the goal state show that D* Lite leads to better or just as good performance with lesser memory usage and computation time when compared with A* search and A* search (TV).
 
 ## Authors
 * Sagar Khar- Research and Solution formulation
