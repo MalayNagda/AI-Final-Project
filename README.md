@@ -36,6 +36,7 @@ D* Lite implemetation in Pacman domain video- https://drive.google.com/file/d/1Y
 
 ## Results
 * Number of nodes expanded by the algorithms discussed above for different mazes sizes and complexities were as tabulated below.
+
 | Maze | D* Lite | A* search | A* search (TV) |
 | ------------- | ------------- | ------------- | ------------- |
 | bigMaze | 10979 | 54160 | 52085 |
@@ -47,6 +48,7 @@ As expected the agent expands fewer nodes with D* Lite for bigMaze and mediumMaz
 D* Lite results in higher number of expanded nodes for smallMaze and tinyMaze but not to the same degree as was the case for A* search and A* search (TV) for bigMaze and mediumMaze. 
 
 * The final score achieved using the three search algortihms and different mazes were-
+
 | Maze | D* Lite | A* search | A* search (TV) |
 | ------------- | ------------- | ------------- | ------------- |
 | bigMaze | 92 | 100 | 70 |
