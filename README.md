@@ -29,7 +29,7 @@ We comapred these algorithms for four mazes of different sizes and complexities.
 
 Number of nodes expanded for different mazes and algorithms.
 | Maze | D* Lite | A* search | A* search (TV) |
-| ------------- | ------------- |
+| ------------- | ------------- | ------------- | ------------- |
 | bigMaze | 10979 | 54160 | 52085 |
 | mediumMaze | 3251 | 8842 | 9481 |
 | SmallMaze | 669 | 548 | 582 |
