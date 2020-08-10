@@ -56,3 +56,8 @@ The final score achieved using the three search algortihms and different mazes w
 * Laukik Mujumda- Code Implementation
 * Malay Tushar Nagda- Testing and Bug fixes
 * Prabal Bijoy Dutta- Analysis and Report Generation
+
+## Acknowledgements
+* This project was undertaken as part of Spring 2020 Artificial Intelligence course at ASU taught by Prof. Yu Zhang.
+* The supplementary files used are part of the broader project as developed by UC Berkely for Pac-Man domain.
+* We used [D* Lite](http://idm-lab.org/bib/abstracts/papers/aaai02b.pdf) research paper for implementing our project.
