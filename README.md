@@ -60,7 +60,7 @@ We can see that the agent consistently receives a higher or equal score for all 
 
 ## Authors
 * Sagar Khar- Research and Solution formulation
-* Laukik Mujumda- Code Implementation
+* Laukik Mujumdar- Code Implementation
 * Malay Tushar Nagda- Testing and Bug fixes
 * Prabal Bijoy Dutta- Analysis and Report Generation
 
