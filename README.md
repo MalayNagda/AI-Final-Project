@@ -2,13 +2,6 @@ Team name- Lumpus
 
 # Life-long planning
 
-Contributions-
-Research & Solution formulation: Sagar Khar,
-Code Implementation: Laukik Mujumdar,
-Testing and Bug fixes: Malay Tushar Nagda,
-Analysis & Report Generation: Prabal Bijoy Dutta
-
-
 A repository to implement the D* Lite search algorithm in a pacman environment. The agent only sees its neighboring squares,
 and can store information about the locations it has visited, and the structure of the walls surrounding those locations.
 
@@ -51,7 +44,7 @@ A* search- Tunnel Vision implemetation in Pacman domain video- https://drive.goo
 D* Lite implemetation in Pacman domain video- https://drive.google.com/file/d/1YwP7NWzpVlkjzU_yhGjMebTtfalB7fww/view?usp=sharing
 
 ## Authors
-* ** Laukik Mujumda **
-** Malay Tushar Nagda **
-** Prabal Bijoy Dutta **
-** Sagar Khar **
+* ** Sagar Khar- Research & Solution formulation **
+* ** Laukik Mujumda- Code Implementation **
+* ** Malay Tushar Nagda- Testing and Bug fixes **
+* ** Prabal Bijoy Dutta- Analysis & Report Generation **
