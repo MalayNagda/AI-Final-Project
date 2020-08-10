@@ -35,7 +35,7 @@ A* search- Tunnel Vision implemetation in Pacman domain video- https://drive.goo
 D* Lite implemetation in Pacman domain video- https://drive.google.com/file/d/1YwP7NWzpVlkjzU_yhGjMebTtfalB7fww/view?usp=sharing
 
 ## Results
-### Number of nodes expanded by the algorithms discussed above for different mazes sizes and complexities were as tabulated below.
+#### Number of nodes expanded by the algorithms discussed above for different mazes sizes and complexities were as tabulated below.
 
 | Maze | D* Lite | A* search | A* search (TV) |
 | ------------- | ------------- | ------------- | ------------- |
