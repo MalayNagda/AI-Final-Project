@@ -34,9 +34,9 @@ The final score achieved using the three search algortihms and different mazes w
 We have used Linux environment for this project. The corresponding commands for running the tests are given below.
 
 To run the D* Lite algorithm on 'bigMaze', execute the following line from inside the search folder
-
+```
 python pacman.py -l bigMaze -z  -p SearchAgent -a fn=dstar,heuristic=manhattanHeuristic
-
+```
 You can replace 'dstar' with 'astar2' or 'astartv' to run the respective algorithms
 
 To test on different mazes, replace 'bigMaze' with another maze like 'mediumMaze', 'smallMaze', 'tinyMaze'.
