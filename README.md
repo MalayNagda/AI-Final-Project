@@ -3,7 +3,7 @@
 Team name- Lumpus
 
 A repository to implement the D* Lite search algorithm in a pacman environment. The agent only sees its neighboring squares,
-and can store information about the locations it has visited, and the structure of the walls surrounding those locations. It uses this information fast replanning of path to goal in case an obstacle appears in the previously computed path.
+and can store information about the locations it has visited, and the structure of the walls surrounding those locations. It uses this information for fast replanning of path to goal in case an obstacle appears in the previously computed path.
 
 If we use traditional planning algorithms like A* which just uses heuristics for planning, the agent has to recompute the entire path to goal state if an obstacle appears in the pre-computed path. This is redundant, and can be avoided by using a planning approach like D* lite which combines usage of incremental path planning and heuristics.
 
