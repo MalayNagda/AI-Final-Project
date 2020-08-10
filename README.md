@@ -47,6 +47,18 @@ D* Lite implemetation in Pacman domain video- https://drive.google.com/file/d/1Y
 As expected the agent expands fewer nodes with D* Lite for bigMaze and mediumMaze with almost 5 times and 3 times fewer nodes respectively as compared to A* search and A* search (TV) for the same mazes. 
 D* Lite results in higher number of expanded nodes for smallMaze and tinyMaze but not to the same degree as was the case for A* search and A* search (TV) for bigMaze and mediumMaze. 
 
+* Time taken (in seconds) by D* Lite algorithm and A* search for path planning towards a goal for different mazes was-
+
+| Maze | D* Lite | A* search | 
+| ------------- | ------------- | ------------- |
+| bigMaze | 1.3 | 8.2 |
+| mediumMaze | 1 | 5.7 |
+| bigCorners | 0.7 | 0.8 |
+| tinySearch | 0.7 | 0.7 | 
+| tinySafeSearch | 0.7 | 0.7 | 
+As seen with the number of expanded nodes, the time taken by the agent for planning a path to the goal is also significantly lesser with D* Lite algorithm
+than A* search for bigger sized mazes and equally good for smaller sized mazes.
+
 * The final score achieved using the three search algortihms and different mazes were-
 
 | Maze | D* Lite | A* search | A* search (TV) |
