@@ -37,9 +37,9 @@ To run the D* Lite algorithm on 'bigMaze', execute the following line from insid
 ```
 python pacman.py -l bigMaze -z  -p SearchAgent -a fn=dstar,heuristic=manhattanHeuristic
 ```
-You can replace 'dstar' with 'astar2' or 'astartv' to run the respective algorithms
+You can replace 'dstar' with 'astar2' or 'astartv' next to 'fn' in the stated command to run the respective algorithms. 
 
-To test on different mazes, replace 'bigMaze' with another maze like 'mediumMaze', 'smallMaze', 'tinyMaze'.
+To test on different mazes, replace 'bigMaze' in the command with another maze like 'mediumMaze', 'smallMaze', 'tinyMaze'.
 
 A* search implemetation in Pacman domain video- https://drive.google.com/file/d/1dJxdAXtt_TP36qseuFwgjHao1YwLrx1H/view?usp=sharing
 
