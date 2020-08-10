@@ -1,17 +1,22 @@
-Team name- Lumpus
-
 # Life-long planning
 
-A repository to implement the D* Lite search algorithm in a pacman environment. The agent only sees its neighboring squares,
-and can store information about the locations it has visited, and the structure of the walls surrounding those locations.
+Team name- Lumpus
 
-If we use traditional planning algorithms like A* to plan, we have to run them each time our robot changes its state. This is 
-redundant, and can be avoided by using an iterative planning approach like D* lite, which uses information computed in the previous
-iterations, reducing the need to recompute.
+A repository to implement the D* Lite search algorithm in a pacman environment. The agent only sees its neighboring squares,
+and can store information about the locations it has visited, and the structure of the walls surrounding those locations. It uses this information fast replanning of path to goal in case an obstacle appears in the previously computed path.
+
+If we use traditional planning algorithms like A* which just uses heuristics for planning, the agent has to recompute the entire path to goal state if an obstacle appears in the pre-computed path. This is redundant, and can be avoided by using a planning approach like D* lite which combines usage of incremental path planning and heuristics.
 
 The objective was to compare the performance of D* Lite with A* search and A* search- Tunnel Vission(TV) to corroborate that D* Lite 
 performs better than A* search for big and complex enough mazes as descrobed in [this paper on D* Lite](http://idm-lab.org/bib/abstracts/papers/aaai02b.pdf) 
 We present our results in terms of the number of nodes expanded for reaching the goal state and the final score achieved in the Pacman domain. 
+
+## Getting Started
+You can download project on your local machine for further development and testing. See Running the tests for instructions on replicating our reults.
+
+The three algorithms implemented can be found in 
+
+
 
 ## Results
 Number of nodes expanded by the algorithms discussed above for different mazes sizes and complexities were as tabulated below.
