@@ -25,15 +25,21 @@ iterations, reducing the need to recompute.
 The objective was to compare the performance of D* Lite with A* search and A* search- Tunnel Vission(TV) in terms of the number of nodes expanded for
 reaching the goal state and the final score achieved in the Pacman domain. 
 
-We comapred these algorithms for four mazes of different sizes and complexities. The results are tabulated as below-
-
-Number of nodes expanded for different mazes and algorithms.
+Number of nodes expanded by the algorithms discussed above for different mazes sizes and complexities were as tabulated below.
 | Maze | D* Lite | A* search | A* search (TV) |
 | ------------- | ------------- | ------------- | ------------- |
 | bigMaze | 10979 | 54160 | 52085 |
 | mediumMaze | 3251 | 8842 | 9481 |
 | SmallMaze | 669 | 548 | 582 |
 | tinyMaze | 122 | 74 | 46 |
+
+The final score achieved using the three search algortihms and different mazes were-
+| Maze | D* Lite | A* search | A* search (TV) |
+| ------------- | ------------- | ------------- | ------------- |
+| bigMaze | 92 | 100 | 70 |
+| mediumMaze | 428 | 420 | 420 |
+| SmallMaze | 473 | 473 | 471 |
+| tinyMaze | 502 | 502 | 502 |
 
 To run the A* algorithm, execute the following line from inside the search folder
 
