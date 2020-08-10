@@ -8,7 +8,7 @@ and can store information about the locations it has visited, and the structure 
 If we use traditional planning algorithms like A* which just uses heuristics for planning, the agent has to recompute the entire path to goal state if an obstacle appears in the pre-computed path. This is redundant, and can be avoided by using a planning approach like D* lite which combines usage of incremental path planning and heuristics.
 
 The objective was to compare the performance of D* Lite with A* search and A* search- Tunnel Vission(TV) to corroborate that D* Lite 
-performs better than A* search for big and complex enough mazes as descrobed in [this paper on D* Lite](http://idm-lab.org/bib/abstracts/papers/aaai02b.pdf) 
+performs better (memory usage and computation time) than A* search for big and complex enough mazes as descrobed in [this paper on D* Lite](http://idm-lab.org/bib/abstracts/papers/aaai02b.pdf) 
 We present our results in terms of the number of nodes expanded for reaching the goal state and the final score achieved in the Pacman domain. 
 
 ## Getting Started
@@ -40,16 +40,21 @@ Number of nodes expanded by the algorithms discussed above for different mazes s
 | ------------- | ------------- | ------------- | ------------- |
 | bigMaze | 10979 | 54160 | 52085 |
 | mediumMaze | 3251 | 8842 | 9481 |
-| SmallMaze | 669 | 548 | 582 |
+| smallMaze | 669 | 548 | 582 |
 | tinyMaze | 122 | 74 | 46 |
+
+As expected the agent expands fewer nodes with D* Lite for bigMaze and mediumMaze with almost 5 times and 3 times fewer nodes respectively as compared to A* search and A* search (TV) for the same mazes. 
+D* Lite results in higher number of expanded nodes for smallMaze and tinyMaze but not to the same degree as was the case for A* search and A* search (TV) for bigMaze and mediumMaze. 
 
 The final score achieved using the three search algortihms and different mazes were-
 | Maze | D* Lite | A* search | A* search (TV) |
 | ------------- | ------------- | ------------- | ------------- |
 | bigMaze | 92 | 100 | 70 |
 | mediumMaze | 428 | 420 | 420 |
-| SmallMaze | 473 | 473 | 471 |
+| smallMaze | 473 | 473 | 471 |
 | tinyMaze | 502 | 502 | 502 |
+
+We can see that the agent consistently receives a higher or equal score for all the mazes using D* Lite as compared with other algorithms that were tested.  
 
 ## Authors
 * Sagar Khar- Research and Solution formulation
