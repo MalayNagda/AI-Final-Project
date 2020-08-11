@@ -2,7 +2,7 @@
 
 ## Final Results Are At The Top for Easy Access
 <img src="a*.gif" width="700" height="500" />
-<img src="d*" width="700" height="500" />
+<img src="d*.gif" width="700" height="500" />
 
 Team name- Lumpus
 
