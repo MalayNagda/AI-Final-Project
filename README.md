@@ -1,8 +1,7 @@
 # Life-long planning
 
 ## Final Results Are At The Top for Easy Access
-<p align="center"> <img src="a*.gif" width="700" height="500" /> </p>
-<img src="d*.gif" width="700" height="500" />
+<p align="center"> <img src="d*.gif" width="700" height="500" /> </p>
 
 Team name- Lumpus
 
@@ -32,11 +31,9 @@ You can replace 'dstar' with 'astar2' or 'astartv' next to 'fn' in the stated co
 
 To test on different mazes, replace 'bigMaze' in the command with another maze like 'mediumMaze', 'smallMaze', 'tinyMaze'.
 
-A* search implemetation in Pacman domain video- https://drive.google.com/file/d/1dJxdAXtt_TP36qseuFwgjHao1YwLrx1H/view?usp=sharing
+<p align="center"> <img src="a*.gif" width="700" height="500" /> </p>
 
 A* search- Tunnel Vision implemetation in Pacman domain video- https://drive.google.com/file/d/12yHSP5GARA5iG13dDJndBeEIUmZIvLVx/view?usp=sharing
-
-D* Lite implemetation in Pacman domain video- https://drive.google.com/file/d/1YwP7NWzpVlkjzU_yhGjMebTtfalB7fww/view?usp=sharing
 
 ## Results
 #### 1. Number of nodes expanded by the algorithms discussed above for different mazes sizes and complexities were as tabulated below.
