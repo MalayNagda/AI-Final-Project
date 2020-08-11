@@ -1,6 +1,5 @@
 # Life-long planning
 
-## Final Results Are At The Top for Easy Access
 <p align="center"> <img src="d*.gif" width="700" height="500" /> </p>
 
 Team name- Lumpus
